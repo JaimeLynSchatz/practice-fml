@@ -3,7 +3,7 @@
 <head>
   <title>Fix My List</title>
   <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
-  <link rel="stylesheet" href="//railsgirls/com/assets/bootstap-theme.css">
+  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -23,8 +23,11 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
+        <li><a href="/ideas">Ideas</a></li>
+        <!-- this doesn't work properly yet -->
+        <!-- <li><a href="/pages/about">About</a></li> -->
       </ul>
+      	
     </div>
   </div>
 </nav>	
