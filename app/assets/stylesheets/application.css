@@ -18,3 +18,15 @@ body { padding-top: 60px; }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
+
+.navbar-brand {
+	float: left;
+	padding: 15px 15px;
+	font-size: 1.8em;
+	line-height: 20px;
+	color: #777777;
+}
+
+#secondary_nav {
+	clear: both;
+}

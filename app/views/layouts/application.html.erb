@@ -20,22 +20,37 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button> -->
-      <a class="navbar-brand" href="/">The Idea app</a>
+      <a class="navbar-brand" href="/">Let's Get Ready to Brainstorm!</a>
     </div>
     <div class="navbar-collapse">
-      <ul class="nav navbar-nav">
+      <ul id="secondary_nav" class="active nav navbar-nav">
         <li><a href="/ideas">Ideas</a></li>
         <li><%= link_to 'New Idea', new_idea_path %></li>
         <!-- this doesn't work properly yet -->
         <!-- <li><a href="/pages/about">About</a></li> -->
       </ul>
+
+      <p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+        <% end %>
       	
     </div>
   </div>
 </nav>	
 
 	<div class="container">
-		<%= yield %>
+		<% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= yield %>
 	</div>
 
 
