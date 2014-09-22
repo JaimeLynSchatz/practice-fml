@@ -75,7 +75,7 @@ Rails.application.configure do
 
   # Configure default url for use in Devise
   config.action_mailer.default_url_options = { :host => 'fixmylist.heroku.com' }
-
+  Rails.application.routes.default_url_options[:host] = 'myappsname.herokuapp.com'
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
