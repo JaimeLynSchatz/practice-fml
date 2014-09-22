@@ -74,7 +74,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Configure default url for use in Devise
-  config.action_mailer.default_url_options = { :host => 'fixmylist.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'fixmylist.heroku.com' }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
