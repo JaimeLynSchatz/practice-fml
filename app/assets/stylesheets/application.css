@@ -30,3 +30,9 @@ th { border-bottom: 1px solid #DDD; }
 #secondary_nav {
 	clear: both;
 }
+
+.small_profile_pic {
+	border-radius: 45px;
+	height: 1.2em;
+	width: 1.2em;
+}
