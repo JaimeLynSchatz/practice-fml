@@ -19,9 +19,14 @@ footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 
+#top-nav {
+	top: -45px;
+	position: relative;
+}
+
 .navbar-brand {
 	float: left;
-	padding: 15px 15px;
+	padding: 15px 15px 5px 15px;
 	font-size: 1.8em;
 	line-height: 20px;
 	color: #777777;
@@ -35,4 +40,10 @@ th { border-bottom: 1px solid #DDD; }
 	border-radius: 45px;
 	height: 1.2em;
 	width: 1.2em;
+}
+
+.tagline {
+	color: #777777;
+	padding-left: 15px;
+	clear: both;
 }
