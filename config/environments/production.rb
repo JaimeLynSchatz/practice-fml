@@ -31,7 +31,17 @@ Rails.application.configure do
 
   # Generate digests for assets URLs.
   config.assets.digest = true
-
+  
+  # Configure AWS for picture management with Paperclip gem
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials =? {
+      :bucket => ENV['S3_BUCKET_NAME'] # TODO set this up
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'] # TODO this, too
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] # TODO this, too
+    }
+  }
+  
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
